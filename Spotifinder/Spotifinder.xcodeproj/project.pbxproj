@@ -18,6 +18,8 @@
 		5EE6587628E79A2C00DC72A6 /* RequestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6587528E79A2C00DC72A6 /* RequestUtils.swift */; };
 		5EE6587828E79B0700DC72A6 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6587728E79B0700DC72A6 /* APIConfig.swift */; };
 		5EE6587A28E79BC400DC72A6 /* URLEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6587928E79BC400DC72A6 /* URLEnums.swift */; };
+		5EE6587D28E8F7CB00DC72A6 /* SpotifyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE6587C28E8F7CB00DC72A6 /* SpotifyAPI */; };
+		5EE6587F28E9017000DC72A6 /* SpotifyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6587E28E9017000DC72A6 /* SpotifyUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		5EE6587528E79A2C00DC72A6 /* RequestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUtils.swift; sourceTree = "<group>"; };
 		5EE6587728E79B0700DC72A6 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		5EE6587928E79BC400DC72A6 /* URLEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEnums.swift; sourceTree = "<group>"; };
+		5EE6587E28E9017000DC72A6 /* SpotifyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyUtils.swift; sourceTree = "<group>"; };
+		5EE6588028E9E1F500DC72A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		642B54876A86B693DCB10B95 /* Pods_Spotifinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotifinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7600F1403C2F0E7F22AB4531 /* Pods-Spotifinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotifinder.release.xcconfig"; path = "Target Support Files/Pods-Spotifinder/Pods-Spotifinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -42,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE6587D28E8F7CB00DC72A6 /* SpotifyAPI in Frameworks */,
 				08C667E4C0DEF0B36E48E45E /* Pods_Spotifinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,6 +84,7 @@
 		5EE6585D28E627CA00DC72A6 /* Spotifinder */ = {
 			isa = PBXGroup;
 			children = (
+				5EE6588028E9E1F500DC72A6 /* Info.plist */,
 				5EE6586E28E7987C00DC72A6 /* API */,
 				5EE6585E28E627CA00DC72A6 /* SpotifinderApp.swift */,
 				5EE6586028E627CA00DC72A6 /* ContentView.swift */,
@@ -105,6 +111,7 @@
 				5EE6587528E79A2C00DC72A6 /* RequestUtils.swift */,
 				5EE6587728E79B0700DC72A6 /* APIConfig.swift */,
 				5EE6587928E79BC400DC72A6 /* URLEnums.swift */,
+				5EE6587E28E9017000DC72A6 /* SpotifyUtils.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -135,6 +142,9 @@
 			dependencies = (
 			);
 			name = Spotifinder;
+			packageProductDependencies = (
+				5EE6587C28E8F7CB00DC72A6 /* SpotifyAPI */,
+			);
 			productName = Spotifinder;
 			productReference = 5EE6585B28E627CA00DC72A6 /* Spotifinder.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +173,9 @@
 				Base,
 			);
 			mainGroup = 5EE6585228E627CA00DC72A6;
+			packageReferences = (
+				5EE6587B28E8F7CB00DC72A6 /* XCRemoteSwiftPackageReference "SpotifyAPI" */,
+			);
 			productRefGroup = 5EE6585C28E627CA00DC72A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE6587F28E9017000DC72A6 /* SpotifyUtils.swift in Sources */,
 				5EE6587228E798D600DC72A6 /* DecoderUtils.swift in Sources */,
 				5EE6587428E7992900DC72A6 /* RequestError.swift in Sources */,
 				5EE6587028E7988800DC72A6 /* CoreAPI.swift in Sources */,
@@ -371,6 +385,7 @@
 				DEVELOPMENT_TEAM = AQ4R3XJ5X5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Spotifinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -401,6 +416,7 @@
 				DEVELOPMENT_TEAM = AQ4R3XJ5X5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Spotifinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -441,6 +457,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5EE6587B28E8F7CB00DC72A6 /* XCRemoteSwiftPackageReference "SpotifyAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Peter-Schorn/SpotifyAPI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5EE6587C28E8F7CB00DC72A6 /* SpotifyAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EE6587B28E8F7CB00DC72A6 /* XCRemoteSwiftPackageReference "SpotifyAPI" */;
+			productName = SpotifyAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5EE6585328E627CA00DC72A6 /* Project object */;
 }
