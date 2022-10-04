@@ -11,10 +11,10 @@ import Combine
 import SpotifyWebAPI
 
 final class SpotifyUtils: ObservableObject {
-    
+
     private static let clientId: String = {
         if let clientId = ProcessInfo.processInfo
-                .environment["CLIENT_ID"] {
+            .environment["CLIENT_ID"] {
             return clientId
         }
         return ""
@@ -22,7 +22,7 @@ final class SpotifyUtils: ObservableObject {
     
     private static let clientSecret: String = {
         if let clientSecret = ProcessInfo.processInfo
-                .environment["CLIENT_SECRET"] {
+            .environment["CLIENT_SECRET"] {
             return clientSecret
         }
         return ""
@@ -44,9 +44,18 @@ final class SpotifyUtils: ObservableObject {
     
     var cancellables: Set<AnyCancellable> = []
     
+    init() {
+        
+        self.api.authorizationManagerDidChange
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: authorizeManagerDidChangeCallback)
+            .store(in: &cancellables)
+
+    }
+    
     // Open browser to request user login
     func authorize() {
-        
+
         let url = api.authorizationManager.makeAuthorizationURL(
             redirectURI: callbackUrl,
             showDialog: true,
@@ -55,5 +64,11 @@ final class SpotifyUtils: ObservableObject {
         )!
         
         UIApplication.shared.open(url)
+    }
+    
+    func authorizeManagerDidChangeCallback() {
+        print("Auth manager: \(self.api.authorizationManager)")
+        
+        User.shared.isLoggedIn = self.api.authorizationManager.isAuthorized()
     }
 }
