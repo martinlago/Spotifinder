@@ -11,6 +11,7 @@
 		5E89EBA228ECD6000066E008 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E89EBA128ECD6000066E008 /* HomeView.swift */; };
 		5ED23E5B28EE1718006B6A22 /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED23E5A28EE1718006B6A22 /* ArtistDetailView.swift */; };
 		5ED23E5E28EF5B0B006B6A22 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED23E5D28EF5B0B006B6A22 /* ListItem.swift */; };
+		5ED23E6128EF704E006B6A22 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED23E6028EF704E006B6A22 /* StringUtils.swift */; };
 		5EE6585F28E627CA00DC72A6 /* SpotifinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6585E28E627CA00DC72A6 /* SpotifinderApp.swift */; };
 		5EE6586128E627CA00DC72A6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6586028E627CA00DC72A6 /* MainView.swift */; };
 		5EE6586328E627CE00DC72A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6586228E627CE00DC72A6 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		5E89EBA128ECD6000066E008 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5ED23E5A28EE1718006B6A22 /* ArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailView.swift; sourceTree = "<group>"; };
 		5ED23E5D28EF5B0B006B6A22 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		5ED23E6028EF704E006B6A22 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		5EE6585B28E627CA00DC72A6 /* Spotifinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE6585E28E627CA00DC72A6 /* SpotifinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifinderApp.swift; sourceTree = "<group>"; };
 		5EE6586028E627CA00DC72A6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		5ED23E5F28EF7041006B6A22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5ED23E6028EF704E006B6A22 /* StringUtils.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		5EE6585228E627CA00DC72A6 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		5EE6585D28E627CA00DC72A6 /* Spotifinder */ = {
 			isa = PBXGroup;
 			children = (
+				5ED23E5F28EF7041006B6A22 /* Resources */,
 				5EE6588728EBA3E500DC72A6 /* Home */,
 				5EE6588128EB9D9C00DC72A6 /* Environment */,
 				5EE6588028E9E1F500DC72A6 /* Info.plist */,
@@ -282,6 +293,7 @@
 				5E89EBA228ECD6000066E008 /* HomeView.swift in Sources */,
 				5EE6588B28EBA4B900DC72A6 /* LoginView.swift in Sources */,
 				5ED23E5B28EE1718006B6A22 /* ArtistDetailView.swift in Sources */,
+				5ED23E6128EF704E006B6A22 /* StringUtils.swift in Sources */,
 				5EE6586128E627CA00DC72A6 /* MainView.swift in Sources */,
 				5EE6585F28E627CA00DC72A6 /* SpotifinderApp.swift in Sources */,
 				5EE6588328EB9DAB00DC72A6 /* User.swift in Sources */,

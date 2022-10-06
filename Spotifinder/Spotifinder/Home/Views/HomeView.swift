@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 import SpotifyWebAPI
 
 struct HomeView: View {
@@ -14,7 +15,7 @@ struct HomeView: View {
 
     @EnvironmentObject var homeViewModel: HomeViewModel
 
-    @State private var artistSearch: String = ""
+    @State var isArtistTapped: Bool = false
 
     var body: some View {
         NavigationView {
@@ -23,11 +24,11 @@ struct HomeView: View {
                     .ignoresSafeArea()
 
                 VStack {
-                    TextField("Search artists", text: $artistSearch)
+                    TextField("Search artists", text: $homeViewModel.searchText)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .disableAutocorrection(true)
                         .onSubmit {
-                            homeViewModel.searchArtists(query: artistSearch)
+                            homeViewModel.searchArtists(query: homeViewModel.searchText)
                         }
                         .padding(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
 
@@ -37,15 +38,15 @@ struct HomeView: View {
                         List {
                             ForEach(homeViewModel.artists, id: \.self) { artist in
                                 buildArtistItem(artist)
-                                    .onTapGesture {
-                                        homeViewModel.selectedArtist = artist
-                                    }
                             }
                         }
                         .redacted(reason: homeViewModel.isFetchingArtists ? .placeholder : [])
                     }
 
                     Spacer()
+
+                    NavigationLink("", destination: ArtistDetailView(), isActive: $isArtistTapped)
+
                 }
             }
             .navigationTitle("Spotifinder")
@@ -62,10 +63,13 @@ struct HomeView: View {
     }
 
     private func buildArtistItem(_ artist: Artist) -> some View {
-        NavigationLink(destination: ArtistDetailView()) {
-            ListItem(imageUrl: artist.images?.last?.url, text: artist.name)
-        }
+        ListItem(imageUrl: artist.images?.last?.url, text: artist.name, showChevron: true)
+            .onTapGesture {
+                homeViewModel.selectedArtist = artist
+                isArtistTapped.toggle()
+            }
     }
+
 }
 
 struct HomeView_Previews: PreviewProvider {

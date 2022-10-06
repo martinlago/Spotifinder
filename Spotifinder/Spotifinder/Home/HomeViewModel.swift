@@ -14,7 +14,13 @@ class HomeViewModel: ObservableObject {
     var spotifyUtils: SpotifyUtils = SpotifyUtils()
     
     private var cancellables: Set<AnyCancellable> = []
-    
+
+    @Published var searchText: String = ""
+    @Published var debouncedText: String = "" {
+        didSet {
+            searchArtists(query: debouncedText)
+        }
+    }
     @Published var artists: [Artist] = []
     @Published var isFetchingArtists: Bool = false
     @Published var selectedArtist: Artist?
@@ -22,6 +28,15 @@ class HomeViewModel: ObservableObject {
     @Published var artistAlbums: [Album] = []
     @Published var isFetchingTracks: Bool = false
     @Published var artistTopTracks: [Track] = []
+
+    init() {
+        $searchText
+            .debounce(for: .seconds(0.8), scheduler: DispatchQueue.main)
+            .sink { [weak self] text in
+                self?.debouncedText = text
+            }
+            .store(in: &cancellables)
+    }
     
     func loginToSpotify() {
         spotifyUtils.authorize()
@@ -122,9 +137,10 @@ class HomeViewModel: ObservableObject {
                     }
                 },
                 receiveValue: { result in
-                    self.artistTopTracks = result.sorted(by: {
+                    let sortedTracks = result.sorted(by: {
                         $0.popularity ?? 0 >= $1.popularity ?? 0
                     })
+                    self.artistTopTracks = Array(sortedTracks.prefix(5))
                     print("Selected artist top tracks retrieved successfully")
                 }
             )
