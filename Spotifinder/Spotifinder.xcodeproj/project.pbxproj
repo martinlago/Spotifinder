@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		08C667E4C0DEF0B36E48E45E /* Pods_Spotifinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642B54876A86B693DCB10B95 /* Pods_Spotifinder.framework */; };
 		5E89EBA228ECD6000066E008 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E89EBA128ECD6000066E008 /* HomeView.swift */; };
+		5ED23E5B28EE1718006B6A22 /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED23E5A28EE1718006B6A22 /* ArtistDetailView.swift */; };
+		5ED23E5E28EF5B0B006B6A22 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED23E5D28EF5B0B006B6A22 /* ListItem.swift */; };
 		5EE6585F28E627CA00DC72A6 /* SpotifinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6585E28E627CA00DC72A6 /* SpotifinderApp.swift */; };
 		5EE6586128E627CA00DC72A6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6586028E627CA00DC72A6 /* MainView.swift */; };
 		5EE6586328E627CE00DC72A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6586228E627CE00DC72A6 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		32AFBF84C1F0B06945EA70E2 /* Pods-Spotifinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotifinder.debug.xcconfig"; path = "Target Support Files/Pods-Spotifinder/Pods-Spotifinder.debug.xcconfig"; sourceTree = "<group>"; };
 		5E89EBA128ECD6000066E008 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5ED23E5A28EE1718006B6A22 /* ArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailView.swift; sourceTree = "<group>"; };
+		5ED23E5D28EF5B0B006B6A22 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		5EE6585B28E627CA00DC72A6 /* Spotifinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE6585E28E627CA00DC72A6 /* SpotifinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifinderApp.swift; sourceTree = "<group>"; };
 		5EE6586028E627CA00DC72A6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -74,10 +78,20 @@
 		5E89EBA028ECD5E40066E008 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5ED23E5C28EF5AFC006B6A22 /* Components */,
 				5EE6588A28EBA4B900DC72A6 /* LoginView.swift */,
 				5E89EBA128ECD6000066E008 /* HomeView.swift */,
+				5ED23E5A28EE1718006B6A22 /* ArtistDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5ED23E5C28EF5AFC006B6A22 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5ED23E5D28EF5B0B006B6A22 /* ListItem.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		5EE6585228E627CA00DC72A6 = {
@@ -280,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED23E5E28EF5B0B006B6A22 /* ListItem.swift in Sources */,
 				5EE6587F28E9017000DC72A6 /* SpotifyUtils.swift in Sources */,
 				5EE6588928EBA3F200DC72A6 /* HomeViewModel.swift in Sources */,
 				5E89EBA228ECD6000066E008 /* HomeView.swift in Sources */,
@@ -288,6 +303,7 @@
 				5EE6587028E7988800DC72A6 /* CoreAPI.swift in Sources */,
 				5EE6587628E79A2C00DC72A6 /* RequestUtils.swift in Sources */,
 				5EE6588B28EBA4B900DC72A6 /* LoginView.swift in Sources */,
+				5ED23E5B28EE1718006B6A22 /* ArtistDetailView.swift in Sources */,
 				5EE6586128E627CA00DC72A6 /* MainView.swift in Sources */,
 				5EE6585F28E627CA00DC72A6 /* SpotifinderApp.swift in Sources */,
 				5EE6587828E79B0700DC72A6 /* APIConfig.swift in Sources */,

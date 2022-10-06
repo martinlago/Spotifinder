@@ -25,6 +25,7 @@ struct HomeView: View {
                 VStack {
                     TextField("Search artists", text: $artistSearch)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .disableAutocorrection(true)
                         .onSubmit {
                             homeViewModel.searchArtists(query: artistSearch)
                         }
@@ -36,6 +37,9 @@ struct HomeView: View {
                         List {
                             ForEach(homeViewModel.artists, id: \.self) { artist in
                                 buildArtistItem(artist)
+                                    .onTapGesture {
+                                        homeViewModel.selectedArtist = artist
+                                    }
                             }
                         }
                         .redacted(reason: homeViewModel.isFetchingArtists ? .placeholder : [])
@@ -58,19 +62,8 @@ struct HomeView: View {
     }
 
     private func buildArtistItem(_ artist: Artist) -> some View {
-        HStack(alignment: .center, spacing: 12) {
-            AsyncImage(url: artist.images?.last?.url) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            } placeholder: {
-                // TODO: Add placeholder image
-                Text("X")
-            }
-            .frame(width: 40, height: 40)
-            .clipShape(RoundedRectangle(cornerRadius: 32))
-
-            Text(artist.name)
+        NavigationLink(destination: ArtistDetailView()) {
+            ListItem(imageUrl: artist.images?.last?.url, text: artist.name)
         }
     }
 }
