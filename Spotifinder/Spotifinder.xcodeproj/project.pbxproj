@@ -15,12 +15,6 @@
 		5EE6586128E627CA00DC72A6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6586028E627CA00DC72A6 /* MainView.swift */; };
 		5EE6586328E627CE00DC72A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6586228E627CE00DC72A6 /* Assets.xcassets */; };
 		5EE6586628E627CE00DC72A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE6586528E627CE00DC72A6 /* Preview Assets.xcassets */; };
-		5EE6587028E7988800DC72A6 /* CoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6586F28E7988800DC72A6 /* CoreAPI.swift */; };
-		5EE6587228E798D600DC72A6 /* DecoderUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6587128E798D600DC72A6 /* DecoderUtils.swift */; };
-		5EE6587428E7992900DC72A6 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6587328E7992900DC72A6 /* RequestError.swift */; };
-		5EE6587628E79A2C00DC72A6 /* RequestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6587528E79A2C00DC72A6 /* RequestUtils.swift */; };
-		5EE6587828E79B0700DC72A6 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6587728E79B0700DC72A6 /* APIConfig.swift */; };
-		5EE6587A28E79BC400DC72A6 /* URLEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6587928E79BC400DC72A6 /* URLEnums.swift */; };
 		5EE6587D28E8F7CB00DC72A6 /* SpotifyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE6587C28E8F7CB00DC72A6 /* SpotifyAPI */; };
 		5EE6587F28E9017000DC72A6 /* SpotifyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6587E28E9017000DC72A6 /* SpotifyUtils.swift */; };
 		5EE6588328EB9DAB00DC72A6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE6588228EB9DAB00DC72A6 /* User.swift */; };
@@ -38,12 +32,6 @@
 		5EE6586028E627CA00DC72A6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5EE6586228E627CE00DC72A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EE6586528E627CE00DC72A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5EE6586F28E7988800DC72A6 /* CoreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAPI.swift; sourceTree = "<group>"; };
-		5EE6587128E798D600DC72A6 /* DecoderUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderUtils.swift; sourceTree = "<group>"; };
-		5EE6587328E7992900DC72A6 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
-		5EE6587528E79A2C00DC72A6 /* RequestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUtils.swift; sourceTree = "<group>"; };
-		5EE6587728E79B0700DC72A6 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
-		5EE6587928E79BC400DC72A6 /* URLEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEnums.swift; sourceTree = "<group>"; };
 		5EE6587E28E9017000DC72A6 /* SpotifyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyUtils.swift; sourceTree = "<group>"; };
 		5EE6588028E9E1F500DC72A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5EE6588228EB9DAB00DC72A6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -138,12 +126,6 @@
 		5EE6586E28E7987C00DC72A6 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				5EE6586F28E7988800DC72A6 /* CoreAPI.swift */,
-				5EE6587128E798D600DC72A6 /* DecoderUtils.swift */,
-				5EE6587328E7992900DC72A6 /* RequestError.swift */,
-				5EE6587528E79A2C00DC72A6 /* RequestUtils.swift */,
-				5EE6587728E79B0700DC72A6 /* APIConfig.swift */,
-				5EE6587928E79BC400DC72A6 /* URLEnums.swift */,
 				5EE6587E28E9017000DC72A6 /* SpotifyUtils.swift */,
 			);
 			path = API;
@@ -298,17 +280,11 @@
 				5EE6587F28E9017000DC72A6 /* SpotifyUtils.swift in Sources */,
 				5EE6588928EBA3F200DC72A6 /* HomeViewModel.swift in Sources */,
 				5E89EBA228ECD6000066E008 /* HomeView.swift in Sources */,
-				5EE6587228E798D600DC72A6 /* DecoderUtils.swift in Sources */,
-				5EE6587428E7992900DC72A6 /* RequestError.swift in Sources */,
-				5EE6587028E7988800DC72A6 /* CoreAPI.swift in Sources */,
-				5EE6587628E79A2C00DC72A6 /* RequestUtils.swift in Sources */,
 				5EE6588B28EBA4B900DC72A6 /* LoginView.swift in Sources */,
 				5ED23E5B28EE1718006B6A22 /* ArtistDetailView.swift in Sources */,
 				5EE6586128E627CA00DC72A6 /* MainView.swift in Sources */,
 				5EE6585F28E627CA00DC72A6 /* SpotifinderApp.swift in Sources */,
-				5EE6587828E79B0700DC72A6 /* APIConfig.swift in Sources */,
 				5EE6588328EB9DAB00DC72A6 /* User.swift in Sources */,
-				5EE6587A28E79BC400DC72A6 /* URLEnums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
