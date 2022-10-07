@@ -25,8 +25,9 @@ struct ArtistDetailView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                 } placeholder: {
-                    // TODO: Add placeholder image
-                    Text("X")
+                    Image(systemName: "photo")
+                        .font(.system(size: 120))
+                        .foregroundColor(Color(.systemGray4))
                 }
                 .frame(width: 200, height: 200)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
