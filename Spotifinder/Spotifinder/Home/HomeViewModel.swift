@@ -15,6 +15,7 @@ class HomeViewModel: ObservableObject {
     
     private var cancellables: Set<AnyCancellable> = []
 
+    @Published var isRetrievingTokens: Bool = false
     @Published var searchText: String = ""
     @Published var debouncedText: String = "" {
         didSet {
@@ -39,6 +40,7 @@ class HomeViewModel: ObservableObject {
     }
     
     func loginToSpotify() {
+        isRetrievingTokens = true
         spotifyUtils.authorize()
     }
     
@@ -50,6 +52,7 @@ class HomeViewModel: ObservableObject {
         )
         .receive(on: RunLoop.main)
         .sink(receiveCompletion: { completion in
+            self.isRetrievingTokens = false
             if case .failure(let error) = completion {
                 print("Error when retrieving tokens: \(error)")
             }

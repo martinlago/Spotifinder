@@ -23,8 +23,9 @@ struct ListItem: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                     } placeholder: {
-                        // TODO: Add placeholder image
-                        Text("X")
+                        Image(systemName: "photo")
+                            .font(.system(size: 22))
+                            .foregroundColor(Color(.systemGray4))
                     }
                     .frame(width: 40, height: 40)
                     .clipShape(RoundedRectangle(cornerRadius: 32))
